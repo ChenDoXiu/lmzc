@@ -1,0 +1,14 @@
+@font-face {
+    font-family: xs;
+    src: url("xs.woff2") format('woff2'),
+	url("xs.woff") format('woff');
+}
+*{
+  font-family:xs;
+  box-sizing:border-box;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  line-height:150%;
+  outline:none;
+}

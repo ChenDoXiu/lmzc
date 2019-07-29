@@ -1,0 +1,204 @@
+
+*{
+  padding:0px;
+}
+body{
+  background-color:#555;
+}
+.form-group{
+  width:100%;
+  padding-left:10px;
+  padding-right:10px;
+  display:flex;
+  flex-direction:column;
+}
+.form-text{
+  width:100%;
+  outline:none;
+  color:#fff;
+  text-align:left;
+  padding:8px 0px;
+  border: 4px solid transparent;
+  -webkit-border-image: url(img/edit_box_indent.png) 2 fill space; /* Safari 3.1-5 */
+  -o-border-image: url(img/edit_box_indent.png) 2 fill space; /* Opera 11-12.1 */
+  border-image: url(img/edit_box_indent.png) 2 fill repeat;
+}
+.form-text:focus{
+  -webkit-border-image: url(img/default_indent_hover.png) 2 fill space; /* Safari 3.1-5 */
+  -o-border-image: url(img/default_indent_hover.png) 2 fill space; /* Opera 11-12.1 */
+  border-image: url(img/edit_box_indent_hover.png) 2 fill repeat;
+  border-image-width:4px;
+}
+.btn{
+  color:#000;
+  padding:6px 0px;
+  display:block;
+  text-decoration:none;  
+  text-align:center;
+}
+.btn-left{
+  text-align:left
+}
+.btn-right{
+  text-align:right;
+}
+.btn-default,.select{
+  border: 4px solid transparent;
+  -webkit-border-image: url(img/pocket_button_default.png) 2 fill space; /* Safari 3.1-5 */
+    -o-border-image: url(img/pocket_button_default.png) 2 fill space; /* Opera 11-12.1 */
+    border-image: url(img/slider_button_default.png) 2 fill repeat;
+    border-image-width:3px;
+	}
+.btn-default:active,.select:active{
+    -webkit-border-image: url(img/slider_button_indent.png) 2 fill space; /* Safari 3.1-5 */
+    -o-border-image: url(img/slider_button_indent.png) 2 fill space; /* Opera 11-12.1 */
+    border-image: url(img/slider_button_indent.png) 2 fill repeat;
+	color:#fff;
+border-image-width:3px;
+}
+.btn-disabled{
+  border: 2px solid #000;
+  color:#666;
+  background-color:#999;
+  padding:10px;
+}
+.progress{
+  width:100%;
+  height:10px;
+  position:relative;
+  overflow:hidden;
+}
+.progress .progress-bar{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-image:url(img/progress_bar_1.png);
+  background-size:auto 100%;
+}
+.progress .progress-value{
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:100%;
+  /*
+  -webkit-border-image: url(img/progress_value.png) 2 5 2 5 fill space; /* Safari 3.1-5 */
+ /* -o-border-image: url(img/progress_value.png) 2 5 2 5 fill space; /* Opera 11-12.1 */
+ /* border-image: url(img/progress_value.png) 2 5 2 5  fill repeat;
+  border-image-width: 4px 10px 4px 10px;*/
+  background-image:url(img/progress_value_1.png);
+  background-size:auto 100%;
+}
+.lever,.checkbox,.radio,.select{
+  -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+		outline:none;
+}
+.lever:after{
+  content: "";
+  display:block;
+  width:45px;
+  height:24px;
+  background-image:url(img/toggle_off.png);
+  background-size:100% 100%;
+}
+.lever:active:after{
+  background-image:url(img/toggle_off_hover.png);
+}
+.lever:checked:after{
+  content: "";
+  display:block;
+  width:45px;
+  height:24px;
+  background-image:url(img/toggle_on.png);
+  background-size:100% 100%;
+}
+.lever:checked:active:after{
+  background-image:url(img/toggle_on_hover.png);
+}
+.checkbox:after,.radio:after{
+  content: "";
+  display:block;
+  width:18px;
+  height:18px;
+  background-image:url(img/space.png);
+  background-size:100% 100%;
+}
+.checkbox:active:after,.radio:active:after{
+  background-image:url(img/spaceHover.png);
+}
+.checkbox:checked:after{
+  content: "";
+  display:block;
+  width:18px;
+  height:18px;
+  background-image:url(img/check.png);
+  background-size:100% 100%;
+}
+.checkbox:checked:active:after{
+  background-image:url(img/checkHover.png);
+}
+.radio:checked:after{
+  content: "";
+  display:block;
+  width:18px;
+  height:18px;
+  background-image:url(img/radio_on.png);
+  background-size:100% 100%;
+}
+.radio:checked:active:after{
+  background-image:url(img/radio_on_hover.png);
+}
+.select-box{
+  position:relative;
+  width:100%;
+  display:flex;
+  height:50px;
+  
+}
+.select{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  padding:6px 0px;
+  text-align:left;
+  padding-left:10px;
+}
+.select:after{
+  content:" ";
+  position:absolute;
+  z-index:1;
+  display:block;
+  width:14px;
+  height:8px;
+  background-image:url(img/black-arrow.png);
+  background-size:100% 100%;
+  top:50%;
+  right:10px;
+  transform: translateY(-50%);
+}
+.select-sel{
+  position:absolute;
+  width:100%;
+  z-index:2;
+  padding:4px;
+  background-color:#949693;
+  border:2px solid #4f4f4f;
+  border-style:inset;
+}
+.select-item{
+  display:flex;
+  width:100%;
+  color:#fff;
+  border:1px solid rgba(0,0,0,0); 
+}
+.select-item label{
+  display:block;
+  width:100%;
+}
+.select-item:active{
+  border:1px solid #fff;
+}
