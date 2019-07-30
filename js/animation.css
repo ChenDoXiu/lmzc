@@ -1,0 +1,15 @@
+@keyframes fade-in {
+0%{opacity: 0;transform:translatex(25px);}
+40% {opacity: 0;transform:translatex(25px);}
+100% {opacity: 1;transform:translatex(0px);}
+}
+@-webkit-keyframes fade-in {
+0%{opacity: 0;transform:translatex(25px);}
+40% {opacity: 0;transform:translatex(25px);}
+100% {opacity: 1;transform:translatex(0px);}
+}
+.fade-in{
+animation: fade-in;
+animation-duration: 2s;
+-webkit-animation:fade-in 2s;
+}
