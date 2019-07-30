@@ -99,7 +99,15 @@ function SelectItem(obj){
 	this.check = $("<input type='radio'>").addClass("radio").prop("name",this.name).prop("value",this.val);
 	this.title = obj.title || "";
 	this.info = obj.info || "";
-	this.body = $("<div></div>").addClass("select-item").addClass("container");
+	this.body = $("<div></div>").addClass("select-item");
+	var that = this;
+	this.body.click(function(){
+		//alert(that.state);
+		that.checked(2);
+	});
+	var bol = this.check;
+	var bor = $("<div></div>").append(this.title).append(this.info);
+	this.body.append(bol).append(bor);
 }
 SelectItem.prototype.checked = function(state){
 	state = state || this.state;
@@ -117,17 +125,9 @@ SelectItem.prototype.checked = function(state){
 	}
 };
 SelectItem.prototype.getItem = function(){
-	this.body.html("");
-	var that = this;
-	this.body.click(function(){
-		//alert(that.state);
-		that.checked(2);
-	});
-	var bol = $("<div></div>").addClass("col-xs-1").append(this.check);
-	var bor = $("<div></div>").addClass("col-xs-11").append(this.title).append(this.info);
-	this.body.append(bol).append(bor);
 	return this.body;
 };
+function setSelect(){
 $(".form-select").each(function(){
 	var sel = new SelectBox({});
 	var name = $(this).attr("name");
@@ -153,3 +153,7 @@ $(".form-select").each(function(){
 });
 
 $("select").remove();
+}
+
+
+
