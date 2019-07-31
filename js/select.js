@@ -36,7 +36,7 @@ window.onerror=function(msg,url,l){alert("错误类型"+msg +"\n 错误地址"+u
 $(document).click(function(){
 		$(".select-sel").css("display","none");
 		});*/
-
+//下拉框构造器
 function SelectBox(ojb){
 	ojb = ojb||{};
 	this.state = ojb.state || 2;
@@ -46,6 +46,7 @@ function SelectBox(ojb){
 	this.item = [];
 	this.obj.push(this);
 }
+//存储所有下拉框
 SelectBox.prototype.obj = [];
 SelectBox.prototype.setState = function(state){
 	state = state || this.state;
@@ -57,6 +58,7 @@ SelectBox.prototype.setState = function(state){
 		this.state = 2;
 	}
 };
+//渲染
 SelectBox.prototype.render = function(node){
 	
 	this.body.append(this.btn).append(this.sel);
@@ -127,6 +129,7 @@ SelectItem.prototype.checked = function(state){
 SelectItem.prototype.getItem = function(){
 	return this.body;
 };
+//将所有的系统select变成自定义的select
 function setSelect(){
 $(".form-select").each(function(){
 	var sel = new SelectBox({});

@@ -1,7 +1,7 @@
 window.onload = function(){
 function main(){
 	setSelect();
-	var test = new Alert({
+	var test = new Message({
 		body : "<div>测试弹窗</div>"
 	});
 	test.rander();
@@ -18,6 +18,7 @@ function main(){
 		}
 		
 	};
+	promptBox("test","info",function(){promptBox("test","info",function(){promptBox("test","info",function(){},function(){})},function(){})},function(){})
 }
 main();
 
