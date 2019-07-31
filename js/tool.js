@@ -18,11 +18,17 @@ function promptBox(title,info,okcell,nocell){
 	box.rander();
 	box.show();
 }
+
+
+
 function seedMessage(mes,time){
+	time = time || 5000;
 	var box = new Message({
 		body:mes
 	});
 	box.rander();
 	box.show();
-	setTimeout(box.hide,time);
+	setTimeout(function(){
+		box.hide(true);
+	},time);
 }

@@ -16,7 +16,7 @@ Message.prototype.show = function(callback){
 callback = callback || function(){};
 	this.box.animate({
 		right:"5px"
-	},500,"swing",callback);
+	},500,"swing");
 };
 //隐藏
 Message.prototype.hide = function(bool){
