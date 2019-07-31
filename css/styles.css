@@ -12,3 +12,7 @@
   line-height:150%;
   outline:none;
 }
+html,body{
+overflow:hidden;
+overflow-y:auto;
+}

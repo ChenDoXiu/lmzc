@@ -1,15 +1,24 @@
 window.onload = function(){
 function main(){
 	setSelect();
-	var test = new Dialog({
-		type:1,
-		title:"ueuejeh"
+	var test = new Alert({
+		body : "<div>测试弹窗</div>"
 	});
 	test.rander();
-	test.show();
-	test.setTitle("23333");
-	test.setBody($("<div class='text-box text-center'>123</div>"));
-	//test.hide();
+	var i = 0;
+
+	var btn = document.getElementById("btn");
+	btn.onclick = function(){
+		if(i == 0 ){
+			test.show();
+			i=1;
+		}else{
+			test.hide();
+			i=0;
+		}
+		
+	};
 }
 main();
+
 };

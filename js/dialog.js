@@ -35,7 +35,7 @@ Dialog.prototype.rander = function(node){
 	box.append($("<div></div>").addClass("dialog-title").addClass(this.titleAligin).html(this.title));
 	box.append($("<div></div>").addClass("dialog-body").html(this.body));
 	box.append($("<div></div>").addClass("dialog-footer").html(this.footer));
-	box.css("display","none");
+	box.css("display","none").css("right","-=100%").css("opacity",0);
 	this.box = box;
 	$(node).append(this.box);
 };
@@ -43,24 +43,28 @@ Dialog.prototype.show = function(){
 	
 	this.box.css("display","block");
 	this.box.animate({
-		right:"-=300",
-		opacity:'0'
-	},0).animate({
-		right:"+=300",
+		right:"+=100%",
 		opacity:"1"
-	},400);
+	},300,"swing");
+};
+Dialog.prototype.del = function(){
+	this.box.animate({
+		right:"-=100%",
+		opacity:'0'
+	},300,"swing",0,function(){
+		$(this).remove();
+	});
+	this.box.html("");
+	
+	//this.box.css("display","none");
 };
 Dialog.prototype.hide = function(){
 	this.box.animate({
-		right:"-=300",
-		opacity:'1'
-	},400).animate({
-		right:"+=300",
+		left:"-=100%",
 		opacity:"0"
-	},0,function(){
+	},300,function(){
 		$(this).hide(0);
 	});
-	//this.box.css("display","none");
 };
 Dialog.prototype.setTitle = function(node){
 	this.title = node;

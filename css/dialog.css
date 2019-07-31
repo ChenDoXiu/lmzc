@@ -55,8 +55,8 @@
   border-right:3px solid transparent;
   border-bottom:8px solid transparent;
   border-left:3px solid transparent;
-  -webkit-border-image: url(img/dialog_background_hollow_1.png) 17 8 42 8 fill space; /* Safari 3.1-5 */
-  -o-border-image: url(img/dialog_background_hollow_1.png) 17 8 42 8 fill space; /* Opera 11-12.1 */
+  -webkit-border-image: url(img/StoreTopBar.png) 1 1 3 1 fill space; /* Safari 3.1-5 */
+  -o-border-image: url(img/StoreTopBar.png) 1 1 3 1 fill space; /* Opera 11-12.1 */
   border-image: url(img/StoreTopBar.png) 1 1 3 1 fill repeat;
   border-image-width: 4px;
 }
@@ -91,4 +91,24 @@
   height:106px;
   width:100%;
 }
-
+.alert{
+  border:10px solid #fff;
+  color:#fff;
+  position:fixed;
+  max-width:50%;
+  padding:0px;
+  top:5px;
+  z-index:999;
+  -webkit-border-image: url(img/greyBorder.png) 5 fill space; /* Safari 3.1-5 */
+  -o-border-image: url(img/greyBorder.png) 5 fill space; /* Opera 11-12.1 */
+  border-image: url(img/greyBorder.png) 5 fill repeat;
+}
+.alert1{
+  border:10px solid #fff;
+  color:#fff;
+  position:absolute;
+  padding:0px;
+  -webkit-border-image: url(img/greyBorder.png) 5 fill space; /* Safari 3.1-5 */
+  -o-border-image: url(img/greyBorder.png) 5 fill space; /* Opera 11-12.1 */
+  border-image: url(img/purpleBorder.png) 5 fill repeat;
+}
